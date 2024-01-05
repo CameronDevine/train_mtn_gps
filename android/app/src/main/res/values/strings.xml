@@ -1911,6 +1911,9 @@
 	<string name="type.railway.tram.bridge">Tram Line Bridge</string>
 	<string name="type.railway.tram.tunnel">Tram Line Tunnel</string>
 	<string name="type.railway.tram_stop">Tram Stop</string>
+	<string name="type.railway.miniature">Miniature Railway</string>
+	<string name="type.railway.miniature.main">Miniature Railway Main Line</string>
+	<string name="type.railway.miniature.yard">Miniature Railway Yard</string>
 	<string name="type.route">Route</string>
 	<string name="type.route.ferry">Ferry</string>
 	<string name="type.route.shuttle_train">route-shuttle_train</string>
