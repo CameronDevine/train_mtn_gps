@@ -735,6 +735,7 @@ line|z16-[railway=construction],
 line|z16-[railway=disused],
 line|z16-[railway=preserved],
 line|z16-[railway=abandoned],
+line|z15-[railway=miniature],
 {color: @railway; opacity: 0.6;}
 
 line|z13-[railway=light_rail][!tunnel],

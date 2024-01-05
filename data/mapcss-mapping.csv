@@ -1682,3 +1682,6 @@ amenity|compressed_air;1592;
 leisure|hackerspace;1593;
 railway|station|subway|singapore;[railway=station][transport=subway][city=singapore],[railway=station][station=subway][city=singapore];;name;int_name;1594;
 railway|subway_entrance|singapore;[railway=subway_entrance][city=singapore];;name;int_name;1595;
+railway|miniature;[railway=miniature][!service][!usage];;name;int_name;1596;
+railway|miniature|yard;[railway=miniature][service=service];;name;int_name;1597;
+railway|miniature|main;[railway=miniature][usage=main];;name;int_name;1598;

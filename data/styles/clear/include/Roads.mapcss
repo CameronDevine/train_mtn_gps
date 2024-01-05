@@ -973,6 +973,7 @@ line|z15-[railway=construction],
 line|z15-[railway=preserved],
 line|z16-[railway=disused],
 line|z16-[railway=abandoned],
+line|z15-[railway=miniature],
 {color: @railway; opacity: 0.7;}
 
 line|z13-[railway=light_rail][!tunnel],
@@ -1013,6 +1014,9 @@ line|z16[railway=rail],
 {width: 2.6;}
 line|z17-[railway=rail],
 {width: 3; opacity: 1;}
+
+line|z15-[railway=miniature],
+{width: 2; opacity: 1;}
 
 line|z16[railway=rail]::dash,
 {width: 1.3; dashes: 4.5,4.5;}

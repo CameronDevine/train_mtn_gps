@@ -64,6 +64,9 @@ barrier-wall                                        # line z15-
 railway-funicular                                   # line z12-
 railway-funicular-bridge                            # line z12-
 railway-funicular-tunnel                            # line z12-
+railway-miniature                                   # line z15-
+railway-miniature-main                              # line z15-
+railway-miniature-yard                              # line z15-
 railway-monorail                                    # line z14-
 railway-monorail-bridge                             # line z14-
 railway-monorail-tunnel                             # line z14-

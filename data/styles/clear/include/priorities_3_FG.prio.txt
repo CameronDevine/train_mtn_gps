@@ -124,6 +124,9 @@ railway-rail-tourism-tunnel::dash                   # line::dash z16- (also has 
 highway-primary_link                                # line z11- (also has pathtext z11-, shield::shield z11-)
 highway-primary_link-bridge                         # line z11- (also has line::bridgeblack z14-, line::bridgewhite z14-, pathtext z11-, shield::shield z11-)
 highway-primary_link-tunnel                         # line z11- (also has line(casing) z14-, pathtext z11-, shield::shield z11-)
+railway-miniature                                   # line z15-
+railway-miniature-main                              # line z15-
+railway-miniature-yard                              # line z15-
 railway-rail-branch                                 # line z11- (also has line::dash z16-)
 railway-rail-branch-bridge                          # line z11- (also has line::bridgeblack z16-, line::bridgewhite z13-, line::dash z16-)
 railway-rail-branch-tunnel                          # line z11- (also has line::dash z16-, line(casing) z14-)

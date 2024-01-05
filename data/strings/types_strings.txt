@@ -22369,6 +22369,15 @@
     zh-Hans = 电车站
     zh-Hant = 電車站
 
+  [type.railway.miniature]
+    en = Miniature Railway
+
+  [type.railway.miniature.main]
+    en = Miniature Railway Main Line
+
+  [type.railway.miniature.yard]
+    en = Miniature Railway Yard
+
   [type.route]
     en = Route
     af = Roete
