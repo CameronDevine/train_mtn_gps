@@ -47,6 +47,7 @@ enum class RouteType : uint8_t
   Bicycle,
   Taxi,
   Transit,
+  Train,
   Ruler
 };
 

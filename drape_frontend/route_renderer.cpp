@@ -55,7 +55,7 @@ void InterpolateByZoom(SubrouteConstPtr const & subroute, ScreenBase const & scr
   ExtractZoomFactors(screen, zoom, index, lerpCoef);
 
   std::array<float, 20> const * halfWidthInPixel = &kRouteHalfWidthInPixelOthers;
-  if (subroute->m_routeType == RouteType::Car || subroute->m_routeType == RouteType::Taxi)
+  if (subroute->m_routeType == RouteType::Car || subroute->m_routeType == RouteType::Taxi || subroute->m_routeType == RouteType::Train)
     halfWidthInPixel = &kRouteHalfWidthInPixelCar;
   else if (subroute->m_routeType == RouteType::Transit)
     halfWidthInPixel = &kRouteHalfWidthInPixelTransit;
@@ -399,6 +399,8 @@ dp::Color RouteRenderer::GetRouteMaskColor(RouteType routeType, double baseDista
       return GetColorConstant(kRouteMaskBicycle);
     if (routeType == RouteType::Pedestrian)
       return GetColorConstant(kRouteMaskPedestrian);
+    if (routeType == RouteType::Train)
+      return GetColorConstant(kRouteMaskCar);
   }
   return dp::Color::Transparent();
 }
@@ -414,6 +416,8 @@ dp::Color RouteRenderer::GetArrowMaskColor(RouteType routeType, double baseDista
       return GetColorConstant(kRouteFirstSegmentArrowsMaskCar);
     if (routeType == RouteType::Bicycle)
       return GetColorConstant(kRouteFirstSegmentArrowsMaskBicycle);
+    if (routeType == RouteType::Train)
+      return GetColorConstant(kRouteFirstSegmentArrowsMaskCar);
   }
   else if (m_distanceFromBegin < baseDistance)
   {
@@ -421,6 +425,8 @@ dp::Color RouteRenderer::GetArrowMaskColor(RouteType routeType, double baseDista
       return GetColorConstant(kRouteArrowsMaskCar);
     if (routeType == RouteType::Bicycle)
       return GetColorConstant(kRouteArrowsMaskBicycle);
+    if (routeType == RouteType::Train)
+      return GetColorConstant(kRouteArrowsMaskCar);
   }
   return dp::Color::Transparent();
 }
