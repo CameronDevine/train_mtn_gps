@@ -3399,6 +3399,12 @@
 
 "type.railway.tram_stop" = "Stație de tramvai";
 
+"type.railway.miniature" = "Miniature Railway";
+
+"type.railway.miniature.main" = "Miniature Railway Main Line";
+
+"type.railway.miniature.yard" = "Miniature Railway Yard";
+
 "type.route" = "Route";
 
 "type.route.ferry" = "Ferry";

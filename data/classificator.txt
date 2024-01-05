@@ -888,6 +888,10 @@ world  +
             bridge  -
             tunnel  -
             {}
+        miniature  +
+            main  -
+            yard  -
+            {}
         monorail  +
             bridge  -
             tunnel  -

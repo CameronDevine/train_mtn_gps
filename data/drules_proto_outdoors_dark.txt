@@ -74012,6 +74012,162 @@ cont {
   }
 }
 cont {
+  name: "railway-miniature"
+  element {
+    scale: 15
+    lines {
+      width: 2.0
+      color: 4470602
+      priority: 320
+      cap: BUTTCAP
+    }
+  }
+  element {
+    scale: 16
+    lines {
+      width: 2.0
+      color: 4470602
+      priority: 320
+    }
+  }
+  element {
+    scale: 17
+    lines {
+      width: 2.0
+      color: 4470602
+      priority: 320
+    }
+  }
+  element {
+    scale: 18
+    lines {
+      width: 2.0
+      color: 4470602
+      priority: 320
+    }
+  }
+  element {
+    scale: 19
+    lines {
+      width: 2.0
+      color: 4470602
+      priority: 320
+    }
+  }
+  element {
+    scale: 20
+    lines {
+      width: 2.0
+      color: 4470602
+      priority: 320
+    }
+  }
+}
+cont {
+  name: "railway-miniature-main"
+  element {
+    scale: 15
+    lines {
+      width: 2.0
+      color: 4470602
+      priority: 320
+      cap: BUTTCAP
+    }
+  }
+  element {
+    scale: 16
+    lines {
+      width: 2.0
+      color: 4470602
+      priority: 320
+    }
+  }
+  element {
+    scale: 17
+    lines {
+      width: 2.0
+      color: 4470602
+      priority: 320
+    }
+  }
+  element {
+    scale: 18
+    lines {
+      width: 2.0
+      color: 4470602
+      priority: 320
+    }
+  }
+  element {
+    scale: 19
+    lines {
+      width: 2.0
+      color: 4470602
+      priority: 320
+    }
+  }
+  element {
+    scale: 20
+    lines {
+      width: 2.0
+      color: 4470602
+      priority: 320
+    }
+  }
+}
+cont {
+  name: "railway-miniature-yard"
+  element {
+    scale: 15
+    lines {
+      width: 2.0
+      color: 4470602
+      priority: 320
+      cap: BUTTCAP
+    }
+  }
+  element {
+    scale: 16
+    lines {
+      width: 2.0
+      color: 4470602
+      priority: 320
+    }
+  }
+  element {
+    scale: 17
+    lines {
+      width: 2.0
+      color: 4470602
+      priority: 320
+    }
+  }
+  element {
+    scale: 18
+    lines {
+      width: 2.0
+      color: 4470602
+      priority: 320
+    }
+  }
+  element {
+    scale: 19
+    lines {
+      width: 2.0
+      color: 4470602
+      priority: 320
+    }
+  }
+  element {
+    scale: 20
+    lines {
+      width: 2.0
+      color: 4470602
+      priority: 320
+    }
+  }
+}
+cont {
   name: "railway-monorail"
   element {
     scale: 14

@@ -1593,3 +1593,6 @@ amenity|recycling|container
 *leisure|hackerspace
 *railway|station|subway|singapore
 *railway|subway_entrance|singapore
+*railway|miniature
+*railway|miniature|yard
+*railway|miniature|main

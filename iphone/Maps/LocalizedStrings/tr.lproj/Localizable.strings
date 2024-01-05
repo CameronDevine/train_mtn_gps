@@ -3399,6 +3399,12 @@
 
 "type.railway.tram_stop" = "Tramvay Durağı";
 
+"type.railway.miniature" = "Miniature Railway";
+
+"type.railway.miniature.main" = "Miniature Railway Main Line";
+
+"type.railway.miniature.yard" = "Miniature Railway Yard";
+
 "type.route" = "Rota";
 
 "type.route.ferry" = "Feribot";

@@ -3399,6 +3399,12 @@
 
 "type.railway.tram_stop" = "トラム";
 
+"type.railway.miniature" = "Miniature Railway";
+
+"type.railway.miniature.main" = "Miniature Railway Main Line";
+
+"type.railway.miniature.yard" = "Miniature Railway Yard";
+
 "type.route" = "ルート";
 
 "type.route.ferry" = "フェリー航路";

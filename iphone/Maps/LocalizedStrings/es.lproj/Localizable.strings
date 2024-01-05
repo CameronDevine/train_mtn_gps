@@ -3399,6 +3399,12 @@
 
 "type.railway.tram_stop" = "Parada de tranvía";
 
+"type.railway.miniature" = "Miniature Railway";
+
+"type.railway.miniature.main" = "Miniature Railway Main Line";
+
+"type.railway.miniature.yard" = "Miniature Railway Yard";
+
 "type.route" = "Ruta";
 
 "type.route.ferry" = "Ruta de ferry";
