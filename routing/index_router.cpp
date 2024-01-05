@@ -28,6 +28,7 @@
 #include "routing_common/bicycle_model.hpp"
 #include "routing_common/car_model.hpp"
 #include "routing_common/pedestrian_model.hpp"
+#include "routing_common/train_model.hpp"
 
 #include "indexer/data_source.hpp"
 
@@ -106,6 +107,7 @@ shared_ptr<VehicleModelFactoryInterface> CreateVehicleModelFactory(
     return make_shared<PedestrianModelFactory>(countryParentNameGetterFn);
   case VehicleType::Bicycle: return make_shared<BicycleModelFactory>(countryParentNameGetterFn);
   case VehicleType::Car: return make_shared<CarModelFactory>(countryParentNameGetterFn);
+  case VehicleType::Train: return make_shared<TrainModelFactory>(countryParentNameGetterFn);
   case VehicleType::Count:
     CHECK(false, ("Can't create VehicleModelFactoryInterface for", vehicleType));
     return nullptr;
@@ -122,7 +124,8 @@ unique_ptr<DirectionsEngine> CreateDirectionsEngine(VehicleType vehicleType,
   case VehicleType::Pedestrian:
   case VehicleType::Transit: return make_unique<PedestrianDirectionsEngine>(dataSource, numMwmIds);
   case VehicleType::Bicycle:
-  case VehicleType::Car: return make_unique<CarDirectionsEngine>(dataSource, numMwmIds);
+  case VehicleType::Car:
+  case VehicleType::Train: return make_unique<CarDirectionsEngine>(dataSource, numMwmIds);
   case VehicleType::Count:
     CHECK(false, ("Can't create DirectionsEngine for", vehicleType));
     return nullptr;
@@ -1853,6 +1856,7 @@ void IndexRouter::SetupAlgorithmMode(IndexGraphStarter & starter, bool guidesAct
   case VehicleType::Bicycle:
     starter.GetGraph().SetMode(WorldGraphMode::Joints);
     break;
+  case VehicleType::Train:
   case VehicleType::Transit:
     starter.GetGraph().SetMode(WorldGraphMode::NoLeaps);
     break;

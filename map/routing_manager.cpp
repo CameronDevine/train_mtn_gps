@@ -201,6 +201,7 @@ VehicleType GetVehicleType(RouterType routerType)
   case RouterType::Bicycle: return VehicleType::Bicycle;
   case RouterType::Vehicle: return VehicleType::Car;
   case RouterType::Transit: return VehicleType::Transit;
+  case RouterType::Train: return VehicleType::Train;
   case RouterType::Ruler: return VehicleType::Transit;
   case RouterType::Count: CHECK(false, ("Invalid type", routerType)); return VehicleType::Count;
   }
@@ -716,6 +717,13 @@ bool RoutingManager::InsertRoute(Route const & route)
         {
           subroute->m_routeType = df::RouteType::Bicycle;
           subroute->AddStyle(df::SubrouteStyle(df::kRouteBicycle, df::RoutePattern(8.0, 2.0)));
+          FillTurnsDistancesForRendering(segments, subroute->m_baseDistance, subroute->m_turns);
+          break;
+        }
+      case RouterType::Train:
+        {
+          subroute->m_routeType = df::RouteType::Train;
+          subroute->AddStyle(df::SubrouteStyle(df::kRouteColor, df::kRouteOutlineColor));
           FillTurnsDistancesForRendering(segments, subroute->m_baseDistance, subroute->m_turns);
           break;
         }

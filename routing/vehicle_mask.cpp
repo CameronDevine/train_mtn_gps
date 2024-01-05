@@ -15,6 +15,7 @@ std::string DebugPrint(VehicleType vehicleType)
   case VehicleType::Bicycle: return "Bicycle";
   case VehicleType::Car: return "Car";
   case VehicleType::Transit: return "Transit";
+  case VehicleType::Train: return "Train";
   case VehicleType::Count: return "Count";
   }
   UNREACHABLE();
@@ -32,6 +33,8 @@ void FromString(std::string_view s, VehicleType & vehicleType)
     vehicleType = VehicleType::Car;
   else if (s == "Transit")
     vehicleType = VehicleType::Transit;
+  else if (s == "Train")
+    vehicleType = VehicleType::Train;
   else
   {
     ASSERT(false, ("Could not read VehicleType from string", s));

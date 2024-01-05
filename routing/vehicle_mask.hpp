@@ -13,7 +13,8 @@ enum class VehicleType
   Bicycle = 1,
   Car = 2,
   Transit = 3,
-  Count = 4
+  Train = 4,
+  Count = 5
 };
 
 using VehicleMask = uint32_t;
@@ -30,6 +31,7 @@ VehicleMask constexpr kPedestrianMask = GetVehicleMask(VehicleType::Pedestrian);
 VehicleMask constexpr kBicycleMask = GetVehicleMask(VehicleType::Bicycle);
 VehicleMask constexpr kCarMask = GetVehicleMask(VehicleType::Car);
 VehicleMask constexpr kTransitMask = GetVehicleMask(VehicleType::Transit);
+VehicleMask constexpr kTrainMask = GetVehicleMask(VehicleType::Train);
 
 std::string DebugPrint(VehicleType vehicleType);
 std::string ToString(VehicleType vehicleType);

@@ -151,7 +151,7 @@ private:
   static void DeserializeAccess(Source & src, VehicleType vehicleType, RoadAccess & roadAccess)
   {
     std::array<uint32_t, static_cast<size_t>(VehicleType::Count)> sectionSizes{};
-    static_assert(static_cast<int>(VehicleType::Count) == 4,
+    static_assert(static_cast<int>(VehicleType::Count) == 5,
                   "It is assumed below that there are only 4 vehicle types and we store 4 numbers "
                   "of sections size. If you add or remove vehicle type you should up "
                   "|kLatestVersion| and save back compatibility here.");
@@ -209,7 +209,7 @@ private:
                                            RoadAccess & roadAccess)
   {
     std::array<uint32_t, static_cast<size_t>(VehicleType::Count)> sectionSizes{};
-    static_assert(static_cast<int>(VehicleType::Count) == 4,
+    static_assert(static_cast<int>(VehicleType::Count) == 5,
                   "It is assumed below that there are only 4 vehicle types and we store 4 numbers "
                   "of sections size. If you add or remove vehicle type you should up "
                   "|kLatestVersion| and save back compatibility here.");

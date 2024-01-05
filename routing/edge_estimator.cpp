@@ -409,6 +409,33 @@ double CarEstimator::CalcSegmentWeight(Segment const & segment, RoadGeometry con
   return result;
 }
 
+// TrainEstimator --------------------------------------------------------------------------------
+class TrainEstimator final : public EdgeEstimator
+{
+public:
+  TrainEstimator(double maxWeightSpeedKMpH, SpeedKMpH const & offroadSpeedKMpH)
+    : EdgeEstimator(maxWeightSpeedKMpH, offroadSpeedKMpH)
+  {
+  }
+
+  // EdgeEstimator overrides:
+  double GetUTurnPenalty(Purpose /* purpose */) const override { return 2.0 * 60 * 60 /* seconds */; }
+  double GetFerryLandingPenalty(Purpose purpose) const override
+  {
+    switch (purpose)
+    {
+    case Purpose::Weight: return 60 * 60;   // seconds
+    case Purpose::ETA: return 30 * 60;      // seconds
+    }
+    UNREACHABLE();
+  }
+
+  double CalcSegmentWeight(Segment const & segment, RoadGeometry const & road, Purpose purpose) const override
+  {
+    return GetMaxWeightSpeedMpS();
+  }
+};
+
 // EdgeEstimator -----------------------------------------------------------------------------------
 // static
 shared_ptr<EdgeEstimator> EdgeEstimator::Create(VehicleType vehicleType, double maxWeighSpeedKMpH,
@@ -427,6 +454,8 @@ shared_ptr<EdgeEstimator> EdgeEstimator::Create(VehicleType vehicleType, double 
   case VehicleType::Car:
     return make_shared<CarEstimator>(dataSourcePtr, numMwmIds, trafficStash, maxWeighSpeedKMpH,
                                      offroadSpeedKMpH);
+  case VehicleType::Train:
+    return make_shared<TrainEstimator>(maxWeighSpeedKMpH, offroadSpeedKMpH);
   case VehicleType::Count:
     CHECK(false, ("Can't create EdgeEstimator for", vehicleType));
     return nullptr;

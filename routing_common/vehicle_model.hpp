@@ -57,6 +57,9 @@ enum class HighwayType : uint16_t
   HighwayTertiaryLink = 272,
   HighwayBusway = 858,    // reserve type here, but this type is not used for any routing by default
   RouteShuttleTrain = 1054,
+  MiniatureRailway = 1595,
+  MiniatureRailwayYard = 1596,
+  MiniatureRailwayMain = 1597,
 };
 
 using HighwayBasedFactors = base::SmallMap<HighwayType, InOutCityFactor>;

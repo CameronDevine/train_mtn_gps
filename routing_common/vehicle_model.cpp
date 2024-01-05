@@ -383,6 +383,9 @@ string DebugPrint(HighwayType type)
   case HighwayType::HighwayTertiaryLink: return "highway-tertiary_link";
   case HighwayType::HighwayBusway: return "highway-busway";
   case HighwayType::RouteShuttleTrain: return "route-shuttle_train";
+  case HighwayType::MiniatureRailway: return "railway-miniature";
+  case HighwayType::MiniatureRailwayYard: return "railway-miniature-yard";
+  case HighwayType::MiniatureRailwayMain: return "railway-miniature-main";
   }
 
   UNREACHABLE();

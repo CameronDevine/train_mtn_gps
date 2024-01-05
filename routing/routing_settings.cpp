@@ -91,6 +91,20 @@ RoutingSettings GetRoutingSettings(VehicleType vehicleType)
             100.0 /* m_minIngoingDistMeters */,
             3 /* m_notSoCloseMaxPointsCount */,
             30.0 /* m_notSoCloseMaxDistMeters */};
+  case VehicleType::Train:
+    return {true /* useDirectionForRouteBuilding */,
+            true /* m_matchRoute */,
+            true /* m_soundDirection */,
+            20.0 /* m_matchingThresholdM */,
+            true /* m_showTurnAfterNext */,
+            -1 /* m_minSpeedForRouteRebuildMpS */,
+            15.0 /* m_finishToleranceM */,
+            9 /* m_maxOutgoingPointsCount */,
+            10.0 /* m_minOutgoingDistMeters */,
+            2 /* m_maxIngoingPointsCount */,
+            10.0 /* m_minIngoingDistMeters */,
+            3 /* m_notSoCloseMaxPointsCount */,
+            25.0 /* m_notSoCloseMaxDistMeters */};
   case VehicleType::Count:
     CHECK(false, ("Can't create GetRoutingSettings for", vehicleType));
   }
